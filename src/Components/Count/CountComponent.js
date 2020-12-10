@@ -6,8 +6,8 @@ export default function CountComponent() {
 
   return (
     <>
-      <button onClick={() => resultContext.dispatch({ type: "decrement" })}>-</button>
-      <button onClick={() => resultContext.dispatch({ type: "increment" })}>+</button>
+      <button onClick={() => resultContext.dispatch({ type: "DECREMENT" })}>-</button>
+      <button onClick={() => resultContext.dispatch({ type: "INCREMENT" })}>+</button>
     </>
   );
 }
