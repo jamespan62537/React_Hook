@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 import ContextStore from "../Utils/Context/ContextStore";
-import MemberListComponent from "../Components/MemberListComponent";
+import MemberListComponent from "../Components/Member/MemberListComponent";
 
 export default function MemberPage() {
   // 建立 state member_list 並給予初始值
@@ -23,7 +23,7 @@ export default function MemberPage() {
       {/* 可參考 https://zh-hant.reactjs.org/docs/context.html#reactcreatecontext */}
       {/* 當子元件調動該 Context 物件，他將會自動向父層查找最近的 Provider */}
       <ContextStore.Provider value={ContextValue}>
-        <MemberListComponent member_list={ContextStore} />
+        <MemberListComponent member_value={ContextStore} />
       </ContextStore.Provider>
     </>
   );

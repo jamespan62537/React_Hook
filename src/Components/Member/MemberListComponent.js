@@ -1,6 +1,6 @@
 import React from "react";
-import ContextStore from "../Utils/Context/ContextStore";
-import CheckButton from "./CheckButton";
+import ContextStore from "../../Utils/Context/ContextStore";
+import AddMemberButtonComponent from "./AddMemberButtonComponent";
 
 
 export default function MemberListComponent() {
@@ -13,7 +13,7 @@ export default function MemberListComponent() {
           <div key={member}>{member}</div>
         ))}
 
-        <CheckButton></CheckButton>
+        <AddMemberButtonComponent />
       </React.Fragment>
     </>
   );

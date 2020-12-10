@@ -1,5 +1,5 @@
 import React from "react";
-import ContextStore from "../Utils/Context/ContextStore";
+import ContextStore from "../../Utils/Context/ContextStore";
 
 export default function CheckButton() {
     let resultContext = React.useContext(ContextStore);

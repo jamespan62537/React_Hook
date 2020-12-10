@@ -2,12 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import MemberPage from "./Pages/MemberPage";
+import CountPage from "./Pages/CountPage";
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
     {/* 會員頁面 */}
     <MemberPage />
+    <CountPage />
   </React.StrictMode>,
   document.getElementById('root')
 );
