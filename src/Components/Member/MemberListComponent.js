@@ -9,6 +9,7 @@ export default function MemberListComponent() {
     <>
       <div>member list</div>
       <React.Fragment>
+        {/* {resultContext.state.count} */}
         {resultContext.member_list.map((member) => (
           <div key={member}>{member}</div>
         ))}

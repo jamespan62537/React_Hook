@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 import ContextStore from "../Utils/Context/ContextStore";
 import MemberListComponent from "../Components/Member/MemberListComponent";
+import { reducers } from "../Store/ReducerStore";
 
 export default function MemberPage() {
   // 建立 state member_list 並給予初始值

@@ -6,11 +6,11 @@ import CountPage from "./Pages/CountPage";
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <div>
     {/* 會員頁面 */}
     <MemberPage />
     <CountPage />
-  </React.StrictMode>,
+  </div>,
   document.getElementById('root')
 );
 
