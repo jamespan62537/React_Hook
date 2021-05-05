@@ -1,23 +1,21 @@
 import { useReducer } from "react";
-
-import ContextStore from "../Utils/Context/ContextStore";
+import ContextStore from "../Store/Context/ContextStore";
 import CountComponent from "../Components/Count/CountComponent";
-import { ReducerStore } from "../Store/ReducerStore";
-
-const initState = ReducerStore();
+import { CountReducer } from "../Store/Reducer/Count/CountReducer";
 
 export default function CountPage() {
-  const [state, dispatch] = useReducer(ReducerStore, initState);
+  const initialState = { count: 0 };
+  const [click_count, clickCountDispatch] = useReducer(CountReducer, initialState);
 
   const ContextValue = {
-    state,
-    dispatch,
+    click_count,
+    clickCountDispatch,
   };
 
   return (
     <ContextStore.Provider value={ContextValue}>
       <div>
-        In Count Component: {state.CountReducer.count}
+        In Count Component: {click_count.count}
         <CountComponent count_value={ContextStore} />
       </div>
     </ContextStore.Provider>

@@ -1,10 +1,21 @@
-import React from "react";
-import ContextStore from "../../Utils/Context/ContextStore";
+import { useContext } from 'react'
+import ContextStore from '../../Store/Context/ContextStore'
 
 export default function CheckButton() {
-    let resultContext = React.useContext(ContextStore);
-    let a = Math.random();
-    return <>
-        <button onClick={() => resultContext.showMember([...resultContext.member_list, a])}>Add Member</button>
-    </>;
+  const resultContext = useContext(ContextStore)
+  const random_number = Math.random()
+  return (
+    <>
+      <button
+        onClick={() =>
+          resultContext.showMember([
+            ...resultContext.member_list,
+            random_number,
+          ])
+        }
+      >
+        Add Member
+      </button>
+    </>
+  )
 }
